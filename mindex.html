@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="./css/mstyle.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/lightbox.css">
 		<script src="lib/jquery-3.4.1.min.js"></script>
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 		<script type="text/javascript">
 			var c=window.location.hash;
 			var m="index.html";
@@ -47,8 +50,8 @@ var _hmt = _hmt || [];
                 <!-- header start -->
                 <header class="top-wrap">
 					<h3 class="top-title"><b>大数据与会计专业</b></h3>
-					<h3 class="top-title"><b>(中外合作办学)</b></h3>
-                    <p>湖北财税职业学院与澳大利亚格里菲斯学院(Griffith College)合作举办高等专科教育项目</p>
+					<h3 class="top-title"><b>&nbsp;&nbsp;(中外合作办学)</b></h3>
+                    <p style="font-size: 17px;">湖北财税职业学院与澳大利亚格里菲斯学院(Griffith College)合作举办高等专科教育项目</p>
                     <p style="text-align:center;"><br>湖北省教育厅中外合作办学项目备案编号：<br>鄂教审批函【2018】5号</p>
 					<p style="text-align:center;">教育部备案编号：<br>教外司办学【2019】35号</p>
                 </header>
@@ -83,25 +86,22 @@ var _hmt = _hmt || [];
                             </div>
                         </li>
                         
-                        <li class="clearfix">
-                            <div class="txt-area">
-                                <h3>项目动态</h3>
-                                <ul class="newslist" style="margin-bottom:20px;">
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="揭牌挂牌仪式[2019年03月]" data-group="group-1" src="./images/news/img1.jpg"><p>揭牌挂牌仪式[2019年03月]</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="GC校长来访两次外宾来访交流照片[2019年11月]" data-group="group-1" src="./images/news/img2.jpg"><p>GC校长来访两次外宾来访交流照片[2019年11月]</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="会计19301班（国际班）学生与外宾座谈" data-group="group-1" src="./images/news/img3.jpg"><p>会计19301班（国际班）学生与外宾座谈</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="会计20301班(国际班)学生趣味运动会" data-group="group-1" src="./images/news/img4.jpg"><p>会计20301班(国际班)学生趣味运动会</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="国际班学生在格里菲斯学生平台参加在线考试（MyStudy Portal）" data-group="group-1" src="./images/news/img5.jpg"><p>国际班学生在格里菲斯学生平台参加在线考试（MyStudy Portal）</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="赴澳学生与Griffith College老师合影" data-group="group-1" src="./images/news/img6.jpg"><p>赴澳学生与Griffith College老师合影</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="赴澳学生与Griffith College院长合影" data-group="group-1" src="./images/news/img7.jpg"><p>赴澳学生与Griffith College院长合影</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="首届赴澳学生在Griffith黄金海岸校区" data-group="group-1" src="./images/news/img8.jpg"><p>首届赴澳学生在Griffith黄金海岸校区</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="赴澳学生荣获学科优秀成绩奖(之一）" data-group="group-1" src="./images/news/img9.jpg"><p>赴澳学生荣获学科优秀成绩奖(之一）</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="赴澳学生参加布里斯班校区新生入学会Orientation Day" data-group="group-1" src="./images/news/img10.jpg"><p>赴澳学生参加布里斯班校区新生入学会Orientation Day</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="二校院长合影" data-group="group-1" src="./images/news/img11.jpg"><p>二校院长合影</p></li>
-									<li style="margin-bottom:20px;"><img class="js-lightBox" data-title="学生外教课演讲" data-group="group-1" src="./images/news/img12.jpg"><p>学生外教课演讲</p></li>
-								</ul>
-                            </div>
-                        </li>
+<!-- 轮播图区域 -->
+<div class="swiper-container" style="width:100%;max-width:600px;margin:20px auto;">
+	<div class="swiper-wrapper">
+	  <div class="swiper-slide"><img src="./images/news/img1.jpg" alt="揭牌挂牌仪式" style="width:100%;"></div>
+	  <div class="swiper-slide"><img src="./images/news/img2.jpg" alt="校长来访" style="width:100%;"></div>
+	  <div class="swiper-slide"><img src="./images/news/img3.jpg" alt="座谈会" style="width:100%;"></div>
+	  <div class="swiper-slide"><img src="./images/news/img4.jpg" alt="趣味运动会" style="width:100%;"></div>
+	  <!-- 更多图片照着加 -->
+	</div>
+	<!-- 分页小圆点 -->
+	<div class="swiper-pagination"></div>
+	<!-- 左右箭头 -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+  </div>
+  
                         
                         <li class="clearfix">
                             <span class="fr ml-40 mb-20 ico-area">
@@ -283,6 +283,8 @@ var _hmt = _hmt || [];
             </div>
         </div>
 	</body>
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src='js/lightBox.js'></script>
 	<script type="text/javascript">
 	jQuery(document).ready(function($) {
