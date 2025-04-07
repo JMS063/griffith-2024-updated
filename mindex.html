@@ -16,8 +16,6 @@
 		<link rel="stylesheet" href="./css/mstyle.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/lightbox.css">
 		<script src="lib/jquery-3.4.1.min.js"></script>
-		<!-- Swiper CSS -->
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 		<script type="text/javascript">
 			var c=window.location.hash;
@@ -86,24 +84,30 @@ var _hmt = _hmt || [];
                             </div>
                         </li>
                         
-<!-- 轮播图区域 -->
-<div class="swiper-container" style="width:100%;max-width:600px;margin:20px auto;">
-	<div class="swiper-wrapper">
-	  <div class="swiper-slide"><img src="./images/news/img1.jpg" alt="揭牌挂牌仪式" style="width:100%;"></div>
-	  <div class="swiper-slide"><img src="./images/news/img2.jpg" alt="校长来访" style="width:100%;"></div>
-	  <div class="swiper-slide"><img src="./images/news/img3.jpg" alt="座谈会" style="width:100%;"></div>
-	  <div class="swiper-slide"><img src="./images/news/img4.jpg" alt="趣味运动会" style="width:100%;"></div>
-	  <!-- 更多图片照着加 -->
-	</div>
-	<!-- 分页小圆点 -->
-	<div class="swiper-pagination"></div>
-	<!-- 左右箭头 -->
-	<div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
-  </div>
-  
-                        
-                        <li class="clearfix">
+                      
+	<div class="container">
+
+			<div class="photogallery" style="text-align: center;">
+				<img src="images\news\img1.jpg" style="width:100%;">
+			</div>
+			  
+			<div class="photogallery" style="text-align: center;">
+				<img src="images\news\img2.jpg" style="width:100%">
+			</div>
+			  
+			  
+	   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	 
+
+	   <div class="caption-container">
+		 <p id="caption"></p>
+	   </div>
+
+	</div>   
+                     
+			
+			<li class="clearfix">
                             <span class="fr ml-40 mb-20 ico-area">
                                 <img src="./images/img_mobile2.jpg">
                             </span>
@@ -283,8 +287,6 @@ var _hmt = _hmt || [];
             </div>
         </div>
 	</body>
-	<!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src='js/lightBox.js'></script>
 	<script type="text/javascript">
 	jQuery(document).ready(function($) {
