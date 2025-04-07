@@ -308,48 +308,69 @@
 })(jQuery);
 
 
-//---------------------------图片------------------------------
-let slideIndex = 1;
+$(document).ready(function() {
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("photogallery");
-  let captionText = document.getElementById("caption");
+  $("img[data-group='group-1']").each(function() {
+    let currentIndex = 0;
+    const items = $(this).closest("ul").find("li"); 
+    const totalItems = items.length;
 
-  // 处理边界情况，确保slideIndex在合理范围内
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
+    
+    items.eq(currentIndex).addClass('active');
 
-  // 隐藏所有图片
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    // 每隔3秒切换图片
+    setInterval(function() {
+        items.eq(currentIndex).removeClass('active'); 
+        currentIndex = (currentIndex + 1) % totalItems; 
+        items.eq(currentIndex).addClass('active'); 
+    }, 3000);
+  });
+
+  
+  $("img[data-group='group-2']").each(function() {
+    let currentIndex = 0;
+    const items = $(this).closest("ul").find("li"); 
+    const totalItems = items.length;
+
+    
+    items.eq(currentIndex).addClass('active');
+
+    
+    setInterval(function() {
+        items.eq(currentIndex).removeClass('active'); 
+        currentIndex = (currentIndex + 1) % totalItems; 
+        items.eq(currentIndex).addClass('active'); 
+    }, 3000);
+  });
+});
+
+
+$(document).ready(function() {
+  let currentIndex = 0;
+  const totalCards = $(".profile-card").length;
+
+  
+  $(".right-btn").click(function() {
+    if (currentIndex < totalCards - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateProfile();
+  });
+
+  
+  $(".left-btn").click(function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = totalCards - 1;
+    }
+    updateProfile();
+  });
+
+  
+  function updateProfile() {
+    $(".profile-cards").css("transform", "translateX(-" + (currentIndex * 100) + "%)");
   }
-
-  // 显示当前图片
-  slides[slideIndex - 1].style.display = "block";
-
-  // 更新文字描述
-  if (captionText) {
-    let currentImg = slides[slideIndex - 1].getElementsByTagName("img")[0];
-    captionText.innerHTML = currentImg.getAttribute("data-caption") || "";
-  }
-}
-
-// 控制图片切换
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// 指定显示某张图片
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-// 页面加载完成后开始自动轮播
-window.onload = function () {
-  showSlides(slideIndex);  // 显示第一张图片
-
-  setInterval(function () {
-    plusSlides(1);  // 每3秒切换一次
-  }, 3000); // 每3秒切换
-};
+});
