@@ -5545,6 +5545,21 @@ body {
     color: #fff;
 }
 
+.center-wrap2 {
+	color:#fff;
+	text-align:center;
+    /*height: 80px;
+	line-height:40px;*/
+	padding:10px 5px;
+	line-height:1.6;
+	margin-bottom:30px;
+}
+
+.center-wrap2 a {
+    color: #fff;
+}
+
+
 .content-wrap ul li {
     width: 21.85185rem;
     margin: 0 auto 2.96296rem;
