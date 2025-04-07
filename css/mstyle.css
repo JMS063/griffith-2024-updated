@@ -5723,74 +5723,75 @@ footer {line-height:1.6;}
 
 .xspj {border-top:1px #ccc solid;padding-top:15px;}
 
+.newslist li {
+    display: none; 
+}
 
-/* ---------------------CSS code for picture---------------------*/
-* {
-    box-sizing: border-box;
-  }
-  
-  .container {
+.newslist li.active {
+    display: block; 
+}
+
+
+
+/* 图片卡片容器 */
+.profile-cards-container {
+    width: 100%;
+    overflow: hidden;
     position: relative;
   }
   
-  .photogallery {
-    display: none;
+  .profile-cards {
+    display: flex;
+    transition: transform 0.3s ease;
   }
   
-  .cursor {
-    cursor: pointer;
+  .profile-card {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column; /* 垂直排列图片和描述 */
   }
   
-  .prev,
-  .next {
+  .profile-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* 保持图片的比例 */
+  }
+  
+  .profile-description {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    text-align: left;
+    color: #333; /* 文字颜色 */
+    flex-grow: 1; /* 保证描述区域占用剩余空间 */
+    max-height: 200px; /* 最大高度，避免描述过长 */
+    overflow-y: auto; /* 内容超出时滚动 */
+  }
+  
+  /* 按钮样式 */
+  .left-btn, .right-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
     cursor: pointer;
     position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
   }
   
-  .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+  .left-btn {
+    left: 10px;
   }
   
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  .right-btn {
+    right: 10px;
   }
   
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  
-  .slides {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .slides:hover {
-    opacity: 1;
-  }
-
-  .container {
-    max-width: 800px;
-    width:80% ;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  .caption-container {
-    text-align: center;
-    color: white;
+  /* 按钮悬停效果 */
+  .left-btn:hover, .right-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
   }
   
