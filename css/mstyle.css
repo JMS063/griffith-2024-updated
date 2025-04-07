@@ -5733,9 +5733,33 @@ footer {line-height:1.6;}
 
 
 
+
+.newslist2 {overflow:auto;}
+.newslist2,.newslist2 li {list-style:none;}
+.newslist2 li {margin:0;padding:0;}
+.newslist2 li img {width:100%;border:0;}
+.newslist2 li p {width:100%;padding:0 5px;margin-top:10px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;}
+
+.newslist2 li {
+    display: none; 
+}
+
+.newslist2 li.active {
+    display: block; 
+}
+
+.newslist2 li img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 /* 图片卡片容器 */
 .profile-cards-container {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto; /* 居中容器 */
     overflow: hidden;
     position: relative;
   }
@@ -5794,4 +5818,6 @@ footer {line-height:1.6;}
   .left-btn:hover, .right-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
+  
+
   
