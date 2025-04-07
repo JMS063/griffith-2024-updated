@@ -5758,7 +5758,7 @@ footer {line-height:1.6;}
 
 /* 图片卡片容器 */
 .profile-cards-container {
-    width: 70%;
+    width: 75%;
     margin: 0 auto; /* 居中容器 */
     overflow: hidden;
     position: relative;
@@ -5807,11 +5807,11 @@ footer {line-height:1.6;}
   }
   
   .left-btn {
-    left: 10px;
+    left: 0px;
   }
   
   .right-btn {
-    right: 10px;
+    right: 0px;
   }
   
   /* 按钮悬停效果 */
