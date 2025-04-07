@@ -5725,37 +5725,72 @@ footer {line-height:1.6;}
 
 
 /* ---------------------CSS code for picture---------------------*/
-/* 图片和导航按钮的样式 */
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .photogallery {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    z-index: 100;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-button:first-of-type {
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .prev {
     left: 0;
-    transform: translateY(-50%);
-}
-
-button:last-of-type {
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
     right: 0;
-    transform: translateY(-50%);
-}
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
-/* 确保只有一张图片显示，其他隐藏 */
-.photogallery {
-    display: none;
-}
+  
+  .slides {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .slides:hover {
+    opacity: 1;
+  }
 
-.photogallery:first-of-type {
-    display: block;
-}
+  .container {
+    max-width: 800px;
+    width:80% ;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .caption-container {
+    text-align: center;
+    color: white;
+  }
+  
