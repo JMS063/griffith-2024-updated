@@ -5756,10 +5756,11 @@ footer {line-height:1.6;}
 }
 
 
-/* 图片卡片容器 */
+
 .profile-cards-container {
     width: 100%;
-    margin: 0 auto; /* 居中容器 */
+    height: 600px;
+    margin: 0 auto; 
     overflow: hidden;
     position: relative;
   }
@@ -5774,38 +5775,37 @@ footer {line-height:1.6;}
     height: 450px;
     flex-shrink: 0;
     display: flex;
-    flex-direction: column; /* 垂直排列图片和描述 */
+    flex-direction: column; 
   }
   
   .profile-card img {
     width: 80%;
-    height: auto;
+    height: 500px;
     object-fit: cover;
-    margin: 20px auto 10px; /* 上20px、左右auto、下10px */
+    margin: 20px auto 10px; 
     display: block;
 }
 
   
   .profile-description {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    background-color: rgba(0, 0, 0, 0.7); 
     text-align: left;
-    color: #333; /* 文字颜色 */
-    flex-grow: 1; /* 保证描述区域占用剩余空间 */
-    max-height: 200px; /* 最大高度，避免描述过长 */
-    overflow-y: auto; /* 内容超出时滚动 */
+    color: #333; 
+    flex-grow: 1; 
+    height: 900px;
   }
   
-  /* 按钮样式 */
+
   .left-btn, .right-btn {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 30px;
-    padding: 10px;
+    padding: 0px;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     z-index: 1000;
   }
@@ -5818,7 +5818,7 @@ footer {line-height:1.6;}
     right: 0px;
   }
   
-  /* 按钮悬停效果 */
+
   .left-btn:hover, .right-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
