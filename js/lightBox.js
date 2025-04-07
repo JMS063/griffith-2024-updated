@@ -316,31 +316,40 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("photogallery");
   let captionText = document.getElementById("caption");
 
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  // 处理边界情况，确保slideIndex在合理范围内
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
 
+  // 隐藏所有图片
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
+  // 显示当前图片
   slides[slideIndex - 1].style.display = "block";
 
+  // 更新文字描述
   if (captionText) {
     let currentImg = slides[slideIndex - 1].getElementsByTagName("img")[0];
     captionText.innerHTML = currentImg.getAttribute("data-caption") || "";
   }
 }
 
-// 下一张
+// 控制图片切换
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// 页面加载完后开始自动轮播
+// 指定显示某张图片
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// 页面加载完成后开始自动轮播
 window.onload = function () {
-  showSlides(slideIndex);
+  showSlides(slideIndex);  // 显示第一张图片
 
   setInterval(function () {
-    plusSlides(1);
+    plusSlides(1);  // 每3秒切换一次
   }, 3000); // 每3秒切换
 };
